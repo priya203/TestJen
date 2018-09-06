@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE828B4D-3617-48DB-9ECB-E242295C816D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnitTestProjectsummary</RootNamespace>
+    <AssemblyName>Selenuimtest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentAssertions, Version=4.19.4.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.19.4\lib\net45\FluentAssertions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions.Core, Version=4.19.4.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.19.4\lib\net45\FluentAssertions.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RelevantCodes.ExtentReports">
+      <HintPath>..\..\..\..\extentreports-net-v2.41.0\RelevantCodes.ExtentReports.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.8.0\lib\net45\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.8.0\lib\net45\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addons_NewBookingPage\Addons_FromNewBookingPage.cs" />
+    <Compile Include="Addons_ResourceManagement\AddonMainPage.cs" />
+    <Compile Include="Addons_ResourceManagement\AddonPageElements.cs" />
+    <Compile Include="Addons_NewBookingPage\AddonsCreateBookingPageElements.cs" />
+    <Compile Include="Authorization request\AuthorizationPageElements.cs" />
+    <Compile Include="Authorization request\AuthrizationMainPage.cs" />
+    <Compile Include="Contacts\ContactsMainPage.cs" />
+    <Compile Include="Contacts\ContactsPageElement.cs" />
+    <Compile Include="Contacts\Iwebdriver.cs" />
+    <Compile Include="Muhammd\BookingModuleMethods.cs" />
+    <Compile Include="Muhammd\BookingModuleReferences.cs" />
+    <Compile Include="Muhammd\ServiceReferences.cs" />
+    <Compile Include="Muhammd\Services.cs" />
+    <Compile Include="BookingSearchAndUpdateBooking\BookingSearchMainPage.cs" />
+    <Compile Include="BookingSearchAndUpdateBooking\BookingSearchPageElements.cs" />
+    <Compile Include="BookingSearchAndUpdateBooking\BookingSearchPageValidators.cs" />
+    <Compile Include="BRE\BREMainPage.cs" />
+    <Compile Include="BRE\BREPageElements.cs" />
+    <Compile Include="Deparments\DeparmentMainpage.cs" />
+    <Compile Include="Deparments\DeparmentPageElement.cs" />
+    <Compile Include="MY Option And Help\MyOptionMainPage.cs" />
+    <Compile Include="MY Option And Help\MyOptionPageElements.cs" />
+    <Compile Include="oData\Login\LoginMethods.cs" />
+    <Compile Include="oData\Login\LoginReferences.cs" />
+    <Compile Include="LookUP\LookUpMainPage.cs" />
+    <Compile Include="LookUP\LookUpPageElements.cs" />
+    <Compile Include="LookUP\LookUpValidators.cs" />
+    <Compile Include="oData\Modules\AddNewVisitorMethods.cs" />
+    <Compile Include="oData\Modules\AddNewVisitorReferences.cs" />
+    <Compile Include="oData\Modules\VisitorPageMethods.cs" />
+    <Compile Include="oData\Modules\VisitorPageReferences.cs" />
+    <Compile Include="PropertySetting_page\PropertySettingMainPage.cs" />
+    <Compile Include="PropertySetting_page\PropertySettingsPageElement.cs" />
+    <Compile Include="Users\UsersMainPage.cs" />
+    <Compile Include="Users\UsersPageElement.cs" />
+    <Compile Include="WebAppLogin\ExtentReport.cs" />
+    <Compile Include="WebAppLogin\SimpleDateFormat.cs" />
+    <Compile Include="ZZZ SearchPageElements\SearchEngineMainPage.cs" />
+    <Compile Include="ZZZ SearchPageElements\SearchEngineMainPageElementMap.cs" />
+    <Compile Include="ZZZ SearchPageElements\SearchEngineMainPageValidator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTest1.cs" />
+    <Compile Include="WebAppBookingSummaryPage\BookingSummaryMainPage.cs" />
+    <Compile Include="WebAppBookingSummaryPage\BookingSummaryPageElements.cs" />
+    <Compile Include="WebAppBookingSummaryPage\BookingSummaryPageValidators.cs" />
+    <Compile Include="WebAppCreateBookingPage\CreateBookingMainPage.cs" />
+    <Compile Include="WebAppCreateBookingPage\CreateBookingPageElements.cs" />
+    <Compile Include="WebAppCreateBookingPage\CreateBookingPageValidators.cs" />
+    <Compile Include="WebAppDiary\DiaryMainPage.cs" />
+    <Compile Include="WebAppDiary\DiaryPageElements.cs" />
+    <Compile Include="WebAppDiary\DiaryPageValidators.cs" />
+    <Compile Include="WebAppLogin\LoginMainPage.cs" />
+    <Compile Include="WebAppLogin\LoginPageElements.cs" />
+    <Compile Include="WebAppLogin\LoginPageValidators.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WebAppLogin\extent-config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
